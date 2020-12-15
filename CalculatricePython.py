@@ -1,6 +1,4 @@
 
-
-
 #les boutons 0,1,2,3,4,5,6,7,8,9 appel la fonction nombreE avec en paramètre leurs nombre sous forme string "0", "1", "2", "3"...
 
 #les boutons plus, moins, fois, diviser appel la fonction operation avec en paramètre leurs opération respective avec la forme exacte:
@@ -18,6 +16,15 @@ sNombre = ""
 #
 
 ve = 0
+o = 0
+ye = 0
+
+#
+#
+
+sauvegarde = ""
+enregistrer = ""
+
 
 
 def Afficher(jo):
@@ -99,10 +106,3 @@ def calculer():
             enregistrer = A * B
 
         Afficher(enregistrer)
-
-
-
-   
-
- 
- 
