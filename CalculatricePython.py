@@ -8,8 +8,6 @@
 
 #le bouton calculer appel la fonction calculer
 
-## et pour finir:
-#la variable variableAfficher doit être remplacer par un config d'un label 
 
 b = 0
 z = 0
@@ -21,7 +19,11 @@ sNombre = ""
 
 ve = 0
 
-def reset():
+
+def afficher():
+    #config d'un label pour afficher tout
+
+def reinitialize():
     global b, ve, z, nombre
     b = 0
     z = 0
@@ -31,24 +33,28 @@ def reset():
 
 
 def nombreE(a):
-    global b
+    global b, ye
     b = b + 1
 
     if b == 11:
-        variableAfficher = "plus de 10 chiffres"
+        Afficher("plus de 10 chiffres")
     else:
         if z == 0
             nombre = nombre + a
+            Afficher(nombre)
         else:
             sNombre = sNombre + a
+            Afficher(nombre + ye + sNombre)
+
+        
 
 
 def operation(c):
     global b, ve
     b = 0
     if ve == 1:
-        variableAfficher = "erreur 2 opérations à la suite 3 operations"
-        reset():
+        Afficher("erreur 2 opérations à la suite 3 operations")
+        reinitialize():
 
     else:
         ve = 1
@@ -56,24 +62,49 @@ def operation(c):
 
         if len(nombre) == 0:
             if o == 0:
-                variableAfficher = "veuillez entrer un chiffre"
+                Afficher("veuillez entrer un chiffre")
             else:
                 nombre = enregistrer
                 sauvegarde = str(A) + c
-                variableAfficher = sauvegarde
+                Afficher(sauvegarde)
 
         else:
             A = int(nombre)
 
             sauvegarde = str(A) + c
-            variableAfficher = sauvegarde
+            Afficher(sauvegarde)
         
 
+def calculer():
+    global sNombre, A, ye, o
+
+    if len(sNombre) == 0
+            afficher("erreur veuillez entrez un nombre")
+            reinitialize():
+    else:
+        B = int(sNombre)
+
+        if ye == " / ":  
+            if B == 0:
+                afficher("division par zero impossible, infinity")
+            else:
+                o = 1
+            enregistrer = A / B
+        else:
 
 
+    afficher(enregistrer)
 
 
-				
+   
+
+    if ye == " + "
+        rengistrer 
+    elif ye == " - ":
+    elif ye == " * ":
+    else:
+
+
 Calculer:
 	#dans l'ordre des operation les plus courantes pour gagner en performance
 	si ye== plus
