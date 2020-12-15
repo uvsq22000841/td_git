@@ -58,7 +58,7 @@ def nombreE(a):
 
 
 def operation(c):
-    global b, ve, ye, o, nombre, sauvegarde, A
+    global b, ve, ye, o, nombre, sauvegarde, A, sNombre
     b = 0
     if ve == 1:
         Afficher("erreur 2 opérations à la suite 3 operations")
