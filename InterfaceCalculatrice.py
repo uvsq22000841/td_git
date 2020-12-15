@@ -77,8 +77,8 @@ def operation(c):
             if o == 0:
                 Afficher("veuillez entrer un chiffre")
             else:
-                nombre = enregistrer
-                A = nombre
+                nombre = str(enregistrer)
+                A = enregistrer
                 sauvegarde = str(A) + c
                 Afficher(sauvegarde)
 
@@ -116,8 +116,6 @@ def calculer():
         Afficher(enregistrer)
         reinitialize()
 
-        z = 1
-        nombre= enregistrer
         o = 1
 
 
