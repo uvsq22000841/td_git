@@ -3,10 +3,8 @@
 
 #les boutons 0,1,2,3,4,5,6,7,8,9 appel la fonction nombreE avec en paramètre leurs nombre sous forme string "0", "1", "2", "3"...
 
-#le bouton plus appel la fonction plus
-#le bouton moins appel la fonction moins
-#le bouton fois appel la fonction fois
-#le bouton diviser appeller la fonction diviser
+#les boutons plus, moins, fois, diviser appel la fonction operation avec en paramètre leurs opération respective avec la forme exacte:
+# " + ", " - ", " * ", " / "
 
 #le bouton calculer appel la fonction calculer
 
@@ -45,7 +43,7 @@ def nombreE(a):
             sNombre = sNombre + a
 
 
-def plus():
+def operation(c):
     global b, ve
     b = 0
     if ve == 1:
@@ -54,113 +52,22 @@ def plus():
 
     else:
         ve = 1
-        y = "plus"
+        y = c
 
         if len(nombre) == 0:
             if o == 0:
                 variableAfficher = "veuillez entrer un chiffre"
             else:
                 nombre = enregistrer
-                variableAfficher = str(A) + " + "
+                sauvegarde = str(A) + c
+                variableAfficher = sauvegarde
 
         else:
             A = int(nombre)
 
-            variableAfficher = 
+            sauvegarde = str(A) + c
+            variableAfficher = sauvegarde
         
-            
-
-a) plus 
-	b=0 #pour que le nombre de chiffre compté reviennent a 0 et soit dorénavcant compter pour le second Nombre
-	si ve == 1
-		variableaAfficher= "erreur 2 opérations à la suite ou 3 operations"
-	sinon
-		ve=  1
-		y= "plus"
-
-		si lengh(nombre) =0 #condition qui verifie si la premiere variable est vide
-			si O=0 #on n'a jamais enregistrer de réponse
-				variableAfficher= "veuillez entrer un chiffre"
-			sinon
-				nombre= enregistrer #et qui prend la réponse précedente
-				variableaAfficher= str(A) + " + "
-
- 		sinon
-			for i in range lenght(nombre)
-				A= int(nombre[i])
-
-			variableaAfficher= str(A) + " + "
-
-
-
-b)  	
-	b= 0	
-	si ve == 1
-	
-		variableaAfficher= "erreur 2 opérations à la suite ou 3 operations"
-	sinon
-		ve=  1
-		y= "moins"
-
-		si lengh(nombre) =0 #condition qui verifie si la premiere variable est vide
-			si O=0 #on n'a jamais enregistrer de réponse
-				variableAfficher= "veuillez entrer un chiffre"
-			sinon
-				nombre= enregistrer #et qui prend la réponse précedente
-				sauvegarde = str(A) + " - " 
-				variableaAfficher= sauvegarde
-
- 		sinon
-			for i in range lenght(nombre)
-				A= int(nombre[i])
-			sauvegarde = str(A) + " - " 
-			variableaAfficher= sauvegarde
-
-
-c) 	
-	b= 0
-	si ve == 1
-		variableaAfficher= "erreur 2 opérations à la suite ou 3 operations"
-	sinon
-		ve=  1
-		y= "fois"
-
-		si lengh(nombre) =0 #condition qui verifie si la premiere variable est vide
-			si O=0 #on n'a jamais enregistrer de réponse
-				variableAfficher= "veuillez entrer un chiffre"
-			sinon
-				nombre= enregistrer #et qui prend la réponse précedente
-				sauvegarde = str(A) + " * "
-				variableaAfficher= sauvegarde
-
- 		sinon
-			for i in range lenght(nombre)
-				A= int(nombre[i])
-			sauvegarde = str(A) + " * "
-			variableaAfficher= sauvegarde
-
-d) 	
-	b= 0
-	si ve == 1
-		variableaAfficher= "erreur 2 opérations à la suite ou 3 operations"
-	sinon
-		ve=  1
-		y= "divide"
-
-		si lengh(nombre) =0 #condition qui verifie si la premiere variable est vide
-			si O=0 #on n'a jamais enregistrer de réponse
-				variableAfficher= "veuillez entrer un chiffre"
-			sinon
-				nombre= enregistrer #et qui prend la réponse précedente
-				sauvegarde = str(A) + " / " 
-#toujours plus de mémoire plutôt que de réaficher le resultat final avec (dans f(calcul) variableAfficher = str(A) + " / " + str(B) + " = " +str(enregistrer)    "
-				variableaAfficher= sauvegarde
-
- 		sinon
-			for i in range lenght(nombre)
-				A= int(nombre[i])
-
-			variableaAfficher= str(A) + " / "
 
 
 
