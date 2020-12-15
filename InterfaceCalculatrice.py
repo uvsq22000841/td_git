@@ -1,44 +1,65 @@
 import tkinter as tk
 
+
 racine = tk.Tk()
 racine.title("racine")
 
-racine.geometry(800*800+50+50)
 
 
 
 
-canvas1 = tk.Canvas(racine, width= "470px", height="540px")
-canvas1.grid()
+canvas = tk.Canvas(racine, width= "470", height="540")
 
-label1 = tk.Label(canvas, width="380px", height="120px", text="bienvenue sur la calculatrice")
-label1.grid()
 
-button = []
+label1 = tk.Label(canvas, width="380", height="120", text="bienvenue sur la calculatrice")
+label1.grid(column=0, row=0, columnspan=2, rowspan=4, padx=10, pady=10)
 
-a = 2
-b = 0  
 
-for i in range(0, 11, 1):
-    if(b == 2):
-        b = -1
-        a = a + 1
-    b = b + 1
+button0 = tk.Button(canvas, width="80", height="60", text="0", command= lambda:nombreE("0"))
+button0.grid(column=0, row=5, padx=10, pady=10)
 
-    button.append(tk.Button(canvas, width="80", height="60", text="0", command= lambda:nombreE(str(i)))
-    button[i].grid(column=a, row=b)
+button1 = tk.Button(canvas, width="80", height="60", text="0", command= lambda:nombreE("1"))
+button1.grid(column=0, row=2, padx=10, pady=10)
 
-buttonOperation = ['' ,'' ,'' ,'' ]
+button2 = tk.Button(canvas, width="80", height="60", text="0", command= lambda:nombreE("2"))
+button2.grid(column=1, row=2, padx=10, pady=10)
 
-buttonOperation[0] = tk.Button(canvas, width="80", height="60", text="+", command= lambda: operation(" + "))
-buttonOperation[1] = tk.Button(canvas, width="80", height="60", text="-", command= lambda: operation(" - "))
-buttonOperation[2] = tk.Button(canvas, width="80", height="60", text="*", command= lambda: operation(" * "))
-ButtonOperation[3] = tk.Button(canvas, width="80", height="60", text="/", command= lambda: operation(" / "))
+button3 = tk.Button(canvas, width="80", height="60", text="0", command= lambda:nombreE("3"))
+button3.grid(column=2, row=2, padx=10, pady=10)
 
-for i in range(0, 4, 1):
-    buttonOperation[i].grid(column=0, row=2+i)
+button4 = tk.Button(canvas, width="80", height="60", text="0", command= lambda:nombreE("4"))
+button4.grid(column=0, row=3, padx=10, pady=10)
+
+button5 = tk.Button(canvas, width="80", height="60", text="0", command= lambda:nombreE("5"))
+button5.grid(column=1, row=3, padx=10, pady=10)
+
+button6 = tk.Button(canvas, width="80", height="60", text="0", command= lambda:nombreE("6"))
+button6.grid(column=2, row=3, padx=10, pady=10)
+
+button7 = tk.Button(canvas, width="80", height="60", text="0", command= lambda:nombreE("7"))
+button7.grid(column=0, row=4, padx=10, pady=10)
+
+button8 = tk.Button(canvas, width="80", height="60", text="0", command= lambda:nombreE("8"))
+button8.grid(column=1, row=4, padx=10, pady=10)
+
+button9 = tk.Button(canvas, width="80", height="60", text="0", command= lambda:nombreE("9"))
+button9.grid(column=2, row=4, padx=10, pady=10)
+
+
+plus = tk.Button(canvas, width="80", height="60", text="+", command= lambda: operation(" + "))
+plus.grid(column=3, row=2, padx=10, pady=10)
+
+moins = tk.Button(canvas, width="80", height="60", text="-", command= lambda: operation(" - "))
+moins.grid(column=3, row=3, padx=10, pady=10)
+
+fois = tk.Button(canvas, width="80", height="60", text="*", command= lambda: operation(" * "))
+fois.grid(column=3, row=4, padx=10, pady=10)
+
+divi = tk.Button(canvas, width="80", height="60", text="/", command= lambda: operation(" / "))
+divi.grid(column=3, row= 5, padx=10, pady=10)
+
 
 buttonCalcule= tk.Button(canvas, width="80", height="60", command= calculer())
-buttonCalcule.grid(column=3,row=5)
+buttonCalcule.grid(column=1,row=5, columnspan=2, padx=10, pady=10)
 
 racine.mainloop()
