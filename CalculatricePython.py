@@ -20,8 +20,10 @@ sNombre = ""
 ve = 0
 
 
-def afficher():
+def afficher(jo):
     #config d'un label pour afficher tout
+    print(jo)
+
 
 def reinitialize():
     global b, ve, z, nombre
@@ -33,7 +35,7 @@ def reinitialize():
 
 
 def nombreE(a):
-    global b, ye
+    global b, ye, z
     b = b + 1
 
     if b == 11:
@@ -46,11 +48,9 @@ def nombreE(a):
             sNombre = sNombre + a
             Afficher(nombre + ye + sNombre)
 
-        
-
 
 def operation(c):
-    global b, ve
+    global b, ve, y, o, nombre, sauvegarde, A
     b = 0
     if ve == 1:
         Afficher("erreur 2 opérations à la suite 3 operations")
@@ -76,65 +76,32 @@ def operation(c):
         
 
 def calculer():
-    global sNombre, A, ye, o
+    global sNombre, A, B ye, o, enregistrer
 
     if len(sNombre) == 0
             afficher("erreur veuillez entrez un nombre")
             reinitialize():
     else:
         B = int(sNombre)
+        o = 1
 
         if ye == " / ":  
             if B == 0:
                 afficher("division par zero impossible, infinity")
             else:
-                o = 1
-            enregistrer = A / B
-        else:
+                enregistrer = A / B
+        else if ye == " + ":
+            enregistrer = A + B
+        else if ye == " - ":
+            enregistrer = A - B
+        else if ye == " * ":
+            enregistrer = A * B
 
+        afficher(enregistrer)
 
-    afficher(enregistrer)
 
 
    
 
-    if ye == " + "
-        rengistrer 
-    elif ye == " - ":
-    elif ye == " * ":
-    else:
-
-
-Calculer:
-	#dans l'ordre des operation les plus courantes pour gagner en performance
-	si ye== plus
-	sinon si ye == moins
-	sinon si ye == fois
-	sinon
-		si lenght(sNombre)==0
-			variableAfficher ="vous n'avez pas entrer de second nombre"
-			#afficher que le resultat précedent n'existe pas
-			O= 0
-		sinon
-			for j in range lenght(sNombre)
-				B= int(nombre[j])
-			if B==0
-				variableAfficher ="division par zero impossible, infinity"
-			sinon
-				o= 1
-				enregistrer= A / B
-				variableAfficher = sauvegarde + str(B) + " = " +str(enregistrer)   
-
-
-			
-
-P
-a chaque fois qu'on a une erreur 
-reinitilisaliser toutes les variables
-I
-intilisaliser toutes les variable necessaire
-C
-mettre en global les variables utilisées
-D
-verifier que pour la première execution qu'on déjà enregistrer une première réponse [enregistrer] car sinon on afficher une erreur
-
+ 
+ 
