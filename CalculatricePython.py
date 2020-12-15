@@ -20,28 +20,29 @@ sNombre = ""
 ve = 0
 
 
-def afficher(jo):
+def Afficher(jo):
     #config d'un label pour afficher tout
     print(jo)
 
 
 def reinitialize():
-    global b, ve, z, nombre
+    global b, ve, z, nombre, o, sNombre
     b = 0
     z = 0
     ve = 0
     o = 0
     nombre = ""
+    sNombre = ""
 
 
 def nombreE(a):
-    global b, ye, z
+    global b, ye, z, nombre, Snombre
     b = b + 1
 
     if b == 11:
         Afficher("plus de 10 chiffres")
     else:
-        if z == 0
+        if z == 0:
             nombre = nombre + a
             Afficher(nombre)
         else:
@@ -50,15 +51,15 @@ def nombreE(a):
 
 
 def operation(c):
-    global b, ve, y, o, nombre, sauvegarde, A
+    global b, ve, ye, o, nombre, sauvegarde, A
     b = 0
     if ve == 1:
         Afficher("erreur 2 opérations à la suite 3 operations")
-        reinitialize():
+        reinitialize()
 
     else:
         ve = 1
-        y = c
+        ye = c
 
         if len(nombre) == 0:
             if o == 0:
@@ -76,28 +77,28 @@ def operation(c):
         
 
 def calculer():
-    global sNombre, A, B ye, o, enregistrer
+    global sNombre, A, B, ye, o, enregistrer
 
-    if len(sNombre) == 0
-            afficher("erreur veuillez entrez un nombre")
-            reinitialize():
+    if len(sNombre) == 0:
+        Afficher("erreur veuillez entrez un nombre")
+        reinitialize()
     else:
         B = int(sNombre)
         o = 1
 
         if ye == " / ":  
             if B == 0:
-                afficher("division par zero impossible, infinity")
+                Afficher("division par zero impossible, infinity")
             else:
                 enregistrer = A / B
-        else if ye == " + ":
+        elif ye == " + ":
             enregistrer = A + B
-        else if ye == " - ":
+        elif ye == " - ":
             enregistrer = A - B
-        else if ye == " * ":
+        elif ye == " * ":
             enregistrer = A * B
 
-        afficher(enregistrer)
+        Afficher(enregistrer)
 
 
 
