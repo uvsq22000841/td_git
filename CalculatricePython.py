@@ -73,6 +73,7 @@ def operation(c):
                 Afficher("veuillez entrer un chiffre")
             else:
                 nombre = enregistrer
+                A = nombre
                 sauvegarde = str(A) + c
                 Afficher(sauvegarde)
 
