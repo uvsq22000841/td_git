@@ -35,8 +35,8 @@ buttonOperation[1] = tk.Button(canvas, width="80", height="60", text="-", comman
 buttonOperation[2] = tk.Button(canvas, width="80", height="60", text="*", command= lambda: operation(" * "))
 ButtonOperation[3] = tk.Button(canvas, width="80", height="60", text="/", command= lambda: operation(" / "))
 
-for i in range(2, 5, 1):
-    buttonOperation[i].grid(column=0, row=i)
+for i in range(0, 4, 1):
+    buttonOperation[i].grid(column=0, row=2+i)
 
 buttonCalcule= tk.Button(canvas, width="80", height="60", command= calculer())
 buttonCalcule.grid(column=3,row=5)
