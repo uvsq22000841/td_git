@@ -23,6 +23,8 @@ sauvegarde = ""
 enregistrer = ""
 
 
+error= 0
+
 canvas1 = tk.Canvas(racine, width=470, height=540)
 canvas1.grid()
 
@@ -90,9 +92,8 @@ def operation(c):
 
 
 def calculer():
-    global sNombre, A, B, ye, o, enregistrer
+    global sNombre, A, B, ye, o, enregistrer, error
 
-    print("quelquechose")
 
     if len(sNombre) == 0:
         Afficher("erreur veuillez entrez un nombre")
@@ -100,10 +101,13 @@ def calculer():
     else:
         B = int(sNombre)
         o = 1
-        print("octoschoseS")
+
         if ye == " / ":
+            print(B)
             if B == 0:
                 Afficher("division par zero impossible, infinity")
+                reinitialize()
+                error= 1
             else:
                 enregistrer = A / B
         elif ye == " + ":
@@ -113,11 +117,13 @@ def calculer():
         elif ye == " * ":
             enregistrer = A * B
 
-        Afficher(enregistrer)
-        reinitialize()
+        if(error != 1):
+            Afficher(enregistrer)
+            reinitialize()
 
-        o = 1
+            o = 1
 
+        error= 0
 
 
 
