@@ -45,10 +45,21 @@ def caractere(c):
         afficher(carac)
 
 def reset():
-    global carac, a
+    global carac, a, reponse
     carac= ''
     a= 0
     reponse = 0
+
+
+def effacetout():
+    global carac, a
+    carac= ''
+    a = 0
+    afficher('')
+
+
+
+
 
 def calcule():
     global carac, a, resultat, reponse, O, V
@@ -162,7 +173,7 @@ button6= tk.Button(canvas1, text="6", command= lambda:caractere("6"))
 button6.grid()
 
 button7= tk.Button(canvas1, text="7", command= lambda:caractere("7"))
-button7= tk.Button(canvas1, text="7", command= lambda:caractere("7"))
+button7.grid()
 
 button8= tk.Button(canvas1, text="8", command= lambda:caractere("8"))
 button8.grid()
@@ -196,6 +207,9 @@ labeltext.grid()
 
 buttoncalcule = tk.Button(canvas1, text="=", command= lambda:calcule())
 buttoncalcule.grid()
+
+buttontoutefface = tk.Button(canvas1, text="effacetout", command= lambda:effacetout())
+buttontoutefface.grid()
 
 
 less = tk.Button(canvas1, text="effacer", command= lambda:effacer())
