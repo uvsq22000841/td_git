@@ -25,7 +25,7 @@ def afficher(c):
 def effacer():
     global carac
     if len(carac) != 0:
-        carac = carac[0:-2]
+        carac = carac[0:-1]
 
     afficher(carac)
 
