@@ -5,6 +5,8 @@ racine = tk.Tk()
 
 
 
+O=[]
+v=[]
 
 canvas1 = tk.Canvas(racine, width= 500, height=500, bg="black")
 canvas1.grid()
@@ -49,7 +51,7 @@ def reset():
     reponse = 0
 
 def calcule():
-    global carac, a, resultat, reponse
+    global carac, a, resultat, reponse, O, V
 
 
     j= carac.count('+') + carac.count('-') + carac.count('*') + carac.count('/') 
@@ -75,18 +77,25 @@ def calcule():
         O= list(A)
         V= list(B)
 
+        A=""
+        B=""
+
         for i in range(len(O)):
             if '_' == O[i]:
                 O[i] = '-'
 
-
-
         for i in range(len(V)):
             if '_' in V:
                 V[i] = '-'
+
+        for i in range(len(O)):
+            A = A + O[i]
+
+        for i in range(len(V)):
+            B = B + V[i]
         
 
-        
+
         print(A)
         print(B)
                 
